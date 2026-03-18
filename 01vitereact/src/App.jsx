@@ -1,10 +1,11 @@
 import Chai from "./chai";
 
-function App() {
+function App() {  
+  const username = "Abhinav"
   return (
     <>
       <Chai />
-      <h1>Welcome to Vite + React!</h1>
+      <h1>Welcome to Vite + React! {username}</h1>
       <p>HI </p>
     </>
    
