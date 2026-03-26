@@ -30,7 +30,7 @@ function Todos() {
   className="mt-4 flex items-center bg-zinc-800 px-4 py-2 rounded"
 >
   <input
-    className="flex-1 text-white bg-zinc-800 border-0 focus:outline-none"
+    className={` flex-1 text-white bg-zinc-800 border-0 focus:outline-none ${editId === todo.id ? '' : 'cursor-not-allowed'}`}
     value={editId === todo.id ? updatedText : todo.text}
     readOnly={editId !== todo.id}
     onChange={(e) => setUpdatedText(e.target.value)}
