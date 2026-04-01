@@ -19,11 +19,8 @@ class AuthService {
         password,
         name,
       });
-      if (userAccount) {
-        this.login({ email, password });
-      } else {
-        return userAccount;
-      }
+
+      return userAccount;
     } catch (error) {
       throw error;
     }
