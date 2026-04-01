@@ -47,7 +47,6 @@ class AuthService {
       return await this.account.get();
     } catch (error) {
       console.log("Error fetching current user:", error);
-      throw error;
     }
     return null;
   }
@@ -57,7 +56,6 @@ class AuthService {
       await this.account.deleteSessions();
     } catch (error) {
       console.log("Error logging out:", error);
-      throw error;
     }
   }
 }
