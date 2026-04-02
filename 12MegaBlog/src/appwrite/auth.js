@@ -48,7 +48,10 @@ class AuthService {
     try {
       return await this.account.get();
     } catch (error) {
-      console.log("Error fetching current user:", error);
+      // 401 Unauthorized is expected when no user is logged in
+      if (error.code !== 401) {
+        console.log("Error fetching current user:", error);
+      }
     }
     return null;
   }
