@@ -20,7 +20,12 @@ class AuthService {
         name,
       });
 
-      return userAccount;
+      if (userAccount) {
+        // call another method
+        return this.login({ email, password });
+      } else {
+        return userAccount;
+      }
     } catch (error) {
       throw error;
     }
